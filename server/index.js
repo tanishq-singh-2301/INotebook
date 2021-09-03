@@ -1,15 +1,22 @@
+require("dotenv").config();
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser');
 const cors = require('cors');
 
-app.use(cors({
-    origin: "*"
-}))
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json('application/json'));
-app.use('/', require('./src/router/routes'))
+/* 
+    CORS
+        -> TO ANYONE
+*/
+app.use(cors({ origin: "*" }));
 
-const PORT = process.env.PORT || 8080
+/* URL PARSER */
+app.use(express.json());
 
-app.listen(PORT, () => { console.log(`Server is running on http://localhost:${PORT}`) });
+/* DIRECTING ALL ROUTES TO ROUTES */
+app.use('/', require('./src/router/routes'));
+
+/* PORT */
+const PORT = process.env.PORT || 8080;
+
+/* SERVER LISTENING PORT */
+app.listen(PORT, () => { console.log(`INotebook server is running on http://localhost:${PORT}`) });

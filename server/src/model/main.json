@@ -1,1 +1,31 @@
-{}
+{
+    "test": {
+        "user": [
+            {
+                "_id": "613102afd33127c0e610d363",
+                "name": "Tanishq",
+                "email": "test@live.com",
+                "password": "passpass",
+                "date": "2021-09-02T16:58:23.165Z",
+                "__v": 0
+            },
+            {
+                "_id": "613107667668c570a2b2601a",
+                "name": "tanishq",
+                "email": "test1@live.com",
+                "password": "passpass",
+                "date": "2021-09-02T17:18:30.134Z",
+                "__v": 0
+            },
+            {
+                "_id": "61310800be1a9c45498290fc",
+                "name": "test2",
+                "email": "test2@live.com",
+                "password": "passpass",
+                "date": "2021-09-02T17:21:04.799Z",
+                "__v": 0
+            }
+        ],
+        "notes": []
+    }
+}
