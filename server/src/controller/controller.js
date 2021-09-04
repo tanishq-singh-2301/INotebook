@@ -7,7 +7,7 @@ exports.home = async (req, res) => {
         working: true,
         path_name: "Home",
         url: "/"
-    })
+    });
 };
 
 /* ALL PATHS< AND MODULE EXPORT */
@@ -27,15 +27,16 @@ exports.allpaths = async (req, res) => {
                 }
             }
         }
-    })
+    });
 };
 
 /* TEST, AND MODULE EXPORT */
 exports.test = async (req, res) => {
-    const data = await user.find({});
+    const data = user.find({});
+
     res.json({
         path_name: "Test",
         url: "/test",
-        data: data
-    })
+        all_users: data
+    });
 };
