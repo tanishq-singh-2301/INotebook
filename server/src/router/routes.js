@@ -16,7 +16,7 @@ route.get('/test', controller.test);
         --> Home
         --> Test
         --> AUTH.. { Further Branched Into More Routes (APIs) }
-        --> NOTE.. { Further Branched Into More Routes (APIs) }
+        --> NOTES.. { Further Branched Into More Routes (APIs) }
 */
 route.use('/api', require('./api/api'));
 

@@ -23,7 +23,17 @@ exports.allpaths = async (req, res) => {
                 auth: {
                     home: '/api/auth',
                     test: '/api/auth/test',
-                    createuser: '/api/auth/createuser'
+                    createuser: '/api/auth/createuser',
+                    login: '/api/auth/login',
+                    fetchuser: '/api/auth/fetchuser'
+                },
+                notes: {
+                    home: '/api/notes',
+                    test: '/api/notes/test',
+                    allnotes: '/api/notes/allnotes',
+                    addnote: '/api/notes/addnote',
+                    updatenote: '/api/notes/updatenote',
+                    deletenote: '/api/notes/deletenote'
                 }
             }
         }
