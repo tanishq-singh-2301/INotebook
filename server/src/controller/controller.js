@@ -42,7 +42,7 @@ exports.allpaths = async (req, res) => {
 
 /* TEST, AND MODULE EXPORT */
 exports.test = async (req, res) => {
-    const data = user.find({});
+    const data = await user.find({});
 
     res.json({
         path_name: "Test",

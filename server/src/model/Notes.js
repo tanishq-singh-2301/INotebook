@@ -9,11 +9,13 @@ module.exports = mongoose.model("notes", new Schema({
     },
     title: {
         type: String,
-        required: true
+        required: true,
+        unique: false
     },
     description: {
         type: String,
-        required: true
+        required: true,
+        unique: false
     },
     tag: {
         type: String,
