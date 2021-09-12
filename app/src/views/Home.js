@@ -1,21 +1,22 @@
 import { useContext, useEffect } from 'react';
 import NavbarContext from 'src/context/navbar/navbarContext';
-import { Link } from 'react-router-dom'
+import AuthContext from 'src/context/auth/Context';
+import { Link, useHistory } from 'react-router-dom'
 
 const Home = () => {
     const NavbarContext_ = useContext(NavbarContext);
+    const { getUser } = useContext(AuthContext);
     const hide_show_btn = () => NavbarContext_.state.sign === '-' ? NavbarContext_.hide() : NavbarContext_.show()
-    // const history = useHistory();
+    const history = useHistory();
 
-    useEffect(() => {
-        const token = localStorage.getItem('token')
-        // if(!token){
-        //     history.push('/register')
-        // } else {
-
-        // }
-        console.log(token)
-    })
+    // eslint-disable-next-line
+    useEffect(async () => {
+        if (!localStorage.getItem('token')) {
+            history.push('/login');
+        }
+        await getUser()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     return (
         <>

@@ -15,16 +15,19 @@ const AddNote = (params) => {
 
     // eslint-disable-next-line
     useEffect(async () => {
+        if (!localStorage.getItem('token')) {
+            history.push('/login');
+        }
         if (isEdit) {
             try {
-                console.log(!notes[0].title)
+                console.log(!notes[1].title)
             } catch {
                 history.push('/')
             }
             setNote((notes.filter(res => res._id === params.match.params.id))[0]);
         } else if (isView) {
             try {
-                console.log(!notes[0].title)
+                console.log(!notes[1].title)
             } catch {
                 history.push('/')
             }

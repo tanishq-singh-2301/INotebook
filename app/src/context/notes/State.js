@@ -2,8 +2,8 @@ import createContext from "./Context";
 import { useState } from 'react';
 
 const NoteState = (props) => {
-    const [notes, setNotes] = useState([]);
-    const auth_token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjEzMzgwYTgxN2Y3ODkxYjQ3YjEwYTRmIn0sImlhdCI6MTYzMDc2NjU4Mn0.ih99FaLkUZXHSn-HOo6JnshPL5eFL3NT4QlsxJ1Vbn4'
+    const [notes, setNotes] = useState(['loading']);
+    const auth_token = localStorage.getItem('token');
 
     const AllNotes = async () => {
         await fetch('https://inotebook-server.vercel.app/api/notes/allnotes', {
@@ -14,9 +14,7 @@ const NoteState = (props) => {
             }
         })
             .then(res => res.json())
-            .then(res => {
-                setNotes(res)
-            })
+            .then(res => setNotes(res))
             .catch(err => alert('something went wrong'))
     };
 

@@ -5,12 +5,13 @@ const NavbarState = (props) => {
     const s1 = {
         navbar: {
             style: {
-                left: '0'
+                left: '0',
+                width: '20vw'
             }
         },
         main__body: {
             style: {
-                width: '80vw'
+                width: 'calc(100% - 300px)'
             }
         },
         sign: '-',
@@ -25,12 +26,13 @@ const NavbarState = (props) => {
                 style: {
                     left: '-400px',
                     overflow: 'hidden',
-                    transition: '1.2s'
+                    transition: '1.2s',
+                    width: '20vw'
                 }
             },
             main__body: {
                 style: {
-                    width: '100vw',
+                    width: '100%',
                     transition: '1.2s'
                 }
             },
@@ -45,12 +47,13 @@ const NavbarState = (props) => {
                 style: {
                     left: '-400px',
                     overflow: 'hidden',
-                    display: 'none'
+                    display: 'none',
+                    width: '20vw'
                 }
             },
             main__body: {
                 style: {
-                    width: '100vw',
+                    width: '100%',
                 }
             },
             sign: '+',
@@ -63,12 +66,13 @@ const NavbarState = (props) => {
             navbar: {
                 style: {
                     left: '0',
-                    transition: '1.2s'
+                    transition: '1.2s',
+                    width: '20vw'
                 }
             },
             main__body: {
                 style: {
-                    width: '80vw',
+                    width: 'calc(100% - 300px)',
                     transition: '1.2s'
                 }
             },

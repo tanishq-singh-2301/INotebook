@@ -1,10 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 
 const Login = () => {
     const [cred, setCred] = useState({ email: '', password: '' });
     const [isLoading, setIsLoading] = useState(false);
     const history = useHistory();
+
+    // eslint-disable-next-line
+    useEffect(() => {
+        if (localStorage.getItem('token')) {
+            history.push('/')
+        }
+        // eslint-disable-next-line
+    }, [])
 
     const submitForm = async (e) => {
         e.preventDefault();
@@ -21,14 +29,11 @@ const Login = () => {
                 if (res.token) {
                     localStorage.setItem('token', res.token);
                     history.push('/')
-                } else {
-                    alert('Envalid Credentials')
+                    return
                 }
+                localStorage.removeItem('token')
+                alert('Envalid Credentials')
                 setIsLoading(false)
-            })
-            .catch(err => {
-                setIsLoading(false)
-                alert('Something went wrong')
             })
     };
     return (

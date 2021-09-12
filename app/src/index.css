@@ -4,12 +4,19 @@
 body {
     font-family: 'Source Code Pro', monospace;
     overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 #home__section {
+    width: 100vw;
     background-color: #131212;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     flex-direction: row-reverse;
 }
@@ -19,13 +26,13 @@ body {
 .navbar {
     background-color: #131212;
     height: 100vh;
-    max-width: 20vw;
     min-width: 300px;
     padding: 2rem 2.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     position: fixed;
+    height: 100vh!important;
 }
 
 .navbar__top {
@@ -46,9 +53,9 @@ body {
 
 /* MAIN BODY */
 
-.main__body {
+#main__body {
     background-color: rgb(253, 255, 255);
-    height: 100vh;
+    min-height: 100vh;
     z-index: 999;
     border: .5px solid #393D42;
 }

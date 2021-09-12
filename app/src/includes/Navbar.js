@@ -1,14 +1,21 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import NavbarContext from 'src/context/navbar/navbarContext';
+import AuthContext from 'src/context/auth/Context';
 import { RiSettings3Fill } from 'react-icons/all';
 import logo from '../assets/perfil.jpg';
 
 const Navbar = (params) => {
     const NavbarContext_ = useContext(NavbarContext);
-    const hide_show_btn = () => {
-        NavbarContext_.state.sign === '-' ? NavbarContext_.hide() : NavbarContext_.show()
-    }
+    const { user, getUser } = useContext(AuthContext);
+    const hide_show_btn = () => NavbarContext_.state.sign === '-' ? NavbarContext_.hide() : NavbarContext_.show()
+
+    // eslint-disable-next-line
+    useEffect(async () => {
+        await getUser()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
     return (
         <>
             <section className="navbar" style={NavbarContext_.state.navbar.style}>
@@ -23,8 +30,8 @@ const Navbar = (params) => {
                         }
                     </div>
                     <div style={{ height: '55%', widt: '100%', display: 'flex', alignItems: 'flex-start', justifyContent: 'center', flexDirection: 'column', padding: '1rem 0' }}>
-                        <h6 style={{ fontSize: '.9rem', color: 'white', fontWeight: '600' }}>Tanishq Singh</h6>
-                        <h6 style={{ fontSize: '.8rem', color: 'dimgray', fontWeight: '500' }}>tanishqsingh641@gmail.com</h6>
+                        <h6 style={{ fontSize: '.9rem', color: 'white', fontWeight: '600' }}>{user.name}</h6>
+                        <h6 style={{ fontSize: '.8rem', color: 'dimgray', fontWeight: '500' }}>{user.email}</h6>
                     </div>
                 </div>
                 <div className="navbar__middle">

@@ -2,13 +2,23 @@ import AuthContext from './Context';
 import { useState } from 'react';
 
 const AuthState = (props) => {
-    const [auth, setAuth] = useState({ auth: false, token: '' });
+    const [user, setUser] = useState({ _id: null, name: null, email: null, date: null });
     const token = localStorage.getItem('token');
-    if (token) {
-        setAuth({ auth: true, token })
+
+    const getUser = async () => {
+        await fetch('https://inotebook-server.vercel.app/api/auth/getuser', {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json',
+                'auth-token': token
+            }
+        })
+            .then(res => res.json())
+            .then(res => setUser(res.data))
     }
+
     return (
-        <AuthContext.Provider value={{ auth, setAuth }}>
+        <AuthContext.Provider value={{ user, getUser }}>
             {props.children}
         </AuthContext.Provider>
     )

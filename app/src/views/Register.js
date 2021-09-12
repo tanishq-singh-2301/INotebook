@@ -1,10 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 
 const Register = () => {
     const [cred, setCred] = useState({ name: '', email: '', password: '' });
     const [isLoading, setIsLoading] = useState(false);
     const history = useHistory();
+
+    useEffect(() => {
+        if (localStorage.getItem('token')) {
+            history.push('/')
+        }
+        // eslint-disable-next-line
+    }, [])
 
     const submitForm = async (e) => {
         e.preventDefault();
