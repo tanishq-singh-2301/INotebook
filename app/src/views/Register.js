@@ -27,7 +27,7 @@ const Register = () => {
             .then(res => {
                 if (res.token) {
                     localStorage.setItem('token', res.token);
-                    history.push('/')
+                    window.location.replace('https://inotebook-test.vercel.app/')
                 } else if (res.code === 11000) {
                     alert('Email already exists')
                 } else {
