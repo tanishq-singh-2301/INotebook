@@ -23,7 +23,7 @@ const Settings = () => {
         <>
             <nav style={{ height: '10vh', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexDirection: 'row', padding: '0 50px' }}>
                 <div style={{ height: '100%', width: '10%', display: 'flex', alignItems: 'center', justifyContent: 'flex-start' }}>
-                    <h6 onClick={hide_show_btn} style={{ textDecoration: 'none', color: 'black', fontSize: 'larger', fontWeight: '600', cursor: 'pointer' }}></h6>
+                    <h6 onClick={hide_show_btn} style={{ textDecoration: 'none', color: 'black', fontSize: 'larger', fontWeight: '600', cursor: 'pointer' }}>Settings</h6>
                 </div>
                 <div style={{ height: '100%', width: '40%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'row' }}>
 
