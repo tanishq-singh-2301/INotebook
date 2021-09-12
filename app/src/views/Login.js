@@ -28,7 +28,7 @@ const Login = () => {
             .then(res => {
                 if (res.token) {
                     localStorage.setItem('token', res.token);
-                    window.location.replace('https://inotebook-test.vercel.app/')
+                    window.location.replace('https://inotebook.vercel.app/')
                     return
                 }
                 localStorage.removeItem('token')

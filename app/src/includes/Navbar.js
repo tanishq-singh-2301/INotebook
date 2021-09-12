@@ -1,17 +1,20 @@
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavbarContext from 'src/context/navbar/navbarContext';
 import AuthContext from 'src/context/auth/Context';
 import { RiSettings3Fill } from 'react-icons/all';
-import logo from '../assets/perfil.jpg';
+import { AvatarGenerator } from 'random-avatar-generator';
 
 const Navbar = (params) => {
+    const [avatar, setAvatar] = useState(null);
     const NavbarContext_ = useContext(NavbarContext);
     const { user, getUser } = useContext(AuthContext);
     const hide_show_btn = () => NavbarContext_.state.sign === '-' ? NavbarContext_.hide() : NavbarContext_.show()
+    const generator = new AvatarGenerator();
 
     // eslint-disable-next-line
     useEffect(async () => {
+        setAvatar(generator.generateRandomAvatar())
         await getUser()
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
@@ -24,7 +27,7 @@ const Navbar = (params) => {
                 <div style={{ height: '.5px', border: 'none', width: '600px', backgroundColor: '#837A66', position: 'fixed', bottom: '35vh', transform: 'rotate(-8deg)' }}></div>
                 <div className="navbar__top">
                     <div style={{ height: '45%', width: '100%', display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }} >
-                        <img alt="img" src={logo} style={{ height: '100%', borderRadius: '7px' }}></img>
+                        <img alt="img" src={avatar} style={{ height: '100%', borderRadius: '7px' }}></img>
                         {
                             <div style={{ color: 'dimgray', height: '20px', width: '20px', cursor: 'pointer' }} onClick={hide_show_btn}>{NavbarContext_.state.html}</div>
                         }

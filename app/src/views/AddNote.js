@@ -19,22 +19,19 @@ const AddNote = (params) => {
             history.push('/login');
         }
         if (isEdit) {
-            try {
-                console.log(!notes[1].title)
-            } catch {
+            if (notes[0] === 'loading') {
                 history.push('/')
+                return;
             }
             setNote((notes.filter(res => res._id === params.match.params.id))[0]);
         } else if (isView) {
-            try {
-                console.log(!notes[1].title)
-            } catch {
+            if (notes[0] === 'loading') {
                 history.push('/')
+                return;
             }
             setNote((notes.filter(res => res._id === params.match.params.id))[0]);
         } else if (isAddNote) {
             setNote({
-                _id: Math.random(100),
                 title: '#NewNote',
                 description: `1. You can change the note name by clicking above.\n2. Write here your note.\n3. After completing the note press the 'add note' button`
             })
@@ -69,8 +66,8 @@ const AddNote = (params) => {
             </nav>
             <div id="addnote_form" style={{ height: '92vh', width: '100%', backgroundColor: '#131212', padding: '10px 20px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
                 <section style={{ height: '80%', width: '43vw', backgroundColor: '#131212', display: 'flex', alignItems: 'flex-start', justifyContent: 'center', flexDirection: 'column' }}>
-                    <input value={note.title} onChange={(e) => { isView ? console.log(e.target.value) : setNote({ ...note, 'title': e.target.value }) }} style={{ height: '7%', width: '20%', border: 'none', outline: 'none', backgroundColor: 'transparent', color: 'whitesmoke', textAlign: 'left', fontSize: 'large', fontWeight: '600', letterSpacing: '.5px', marginBottom: '10px' }}></input>
-                    <textarea autoCorrect='off' autoFocus='off' autoComplete='off' autoCapitalize='off' value={note.description} onChange={(e) => { isView ? console.log(e.target.value) : setNote({ ...note, 'description': e.target.value }) }} style={{ height: '93%', width: '100%', outline: 'none', border: 'none', backgroundColor: 'transparent', color: 'whitesmoke', textAlign: 'left', fontSize: 'medium', fontWeight: '400', letterSpacing: '.5px' }}></textarea>
+                    <input value={note.title} onChange={(e) => { isView ? console.log(null) : setNote({ ...note, 'title': e.target.value }) }} style={{ height: '7%', width: '100%', border: 'none', outline: 'none', backgroundColor: 'transparent', color: 'whitesmoke', textAlign: 'left', fontSize: 'large', fontWeight: '600', letterSpacing: '.5px', marginBottom: '10px' }}></input>
+                    <textarea autoCorrect='off' autoFocus='off' autoComplete='off' autoCapitalize='off' value={note.description} readOnly={isView} onChange={(e) => { isView ? console.log(null) : setNote({ ...note, 'description': e.target.value }) }} style={{ height: '93%', width: '100%', outline: 'none', border: 'none', backgroundColor: 'transparent', color: 'whitesmoke', textAlign: 'left', fontSize: 'medium', fontWeight: '400', letterSpacing: '.5px', resize: 'none' }}></textarea>
                 </section>
                 {
                     isView ? null :
