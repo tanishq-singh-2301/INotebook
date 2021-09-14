@@ -5,8 +5,7 @@ const NavbarState = (props) => {
     const s1 = {
         navbar: {
             style: {
-                left: '0',
-                width: '20vw'
+                left: '0'
             }
         },
         main__body: {
@@ -24,36 +23,18 @@ const NavbarState = (props) => {
         setState({
             navbar: {
                 style: {
-                    left: '-400px',
-                    overflow: 'hidden',
-                    transition: '1.2s',
-                    width: '20vw'
+                    left: '-600px',
+                    border: 'none'
                 }
             },
             main__body: {
                 style: {
-                    width: '100%',
-                    transition: '1.2s'
-                }
-            },
-            sign: '+',
-            html: <i className="fas fa-angle-right" style={{ color: 'black' }}></i>
-        })
-    };
-
-    const hideInstant = () => {
-        setState({
-            navbar: {
-                style: {
-                    left: '-400px',
-                    overflow: 'hidden',
-                    display: 'none',
-                    width: '20vw'
-                }
-            },
-            main__body: {
-                style: {
-                    width: '100%',
+                    width: '100vw',
+                    minHeight: '100vh',
+                    transition: '1.4s',
+                    position: 'absolute',
+                    top: 0,
+                    right: 0,
                 }
             },
             sign: '+',
@@ -66,14 +47,16 @@ const NavbarState = (props) => {
             navbar: {
                 style: {
                     left: '0',
-                    transition: '1.2s',
-                    width: '20vw'
                 }
             },
             main__body: {
                 style: {
-                    width: 'calc(100% - 300px)',
-                    transition: '1.2s'
+                    width: 'calc(100vw - 300px)',
+                    minHeight: '100vh',
+                    transition: '1.4s',
+                    position: 'absolute',
+                    top: 0,
+                    right: 0
                 }
             },
             sign: '-',
@@ -82,7 +65,7 @@ const NavbarState = (props) => {
     };
 
     return (
-        <NavbarContext.Provider value={{ state, hide, show, hideInstant }} >
+        <NavbarContext.Provider value={{ state, hide, show }} >
             {props.children}
         </NavbarContext.Provider>
     )

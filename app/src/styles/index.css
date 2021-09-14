@@ -6,6 +6,7 @@ body {
     overflow-x: hidden;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    background-color: #131212;
 }
 
 body::-webkit-scrollbar {
@@ -13,12 +14,11 @@ body::-webkit-scrollbar {
 }
 
 #home__section {
-    width: 100vw;
     background-color: #131212;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    flex-direction: row-reverse;
+    flex-direction: row;
 }
 
 /* NAVBAR */
@@ -57,7 +57,7 @@ body::-webkit-scrollbar {
     background-color: rgb(253, 255, 255);
     min-height: 100vh;
     z-index: 999;
-    border: .5px solid #393D42;
+    border-left: .5px solid #393D42;
 }
 
 /* LOGIN FORM */

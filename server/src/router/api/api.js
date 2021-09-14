@@ -28,6 +28,6 @@ route.use('/auth', require("./services/auth"));
         --> Delete Note
 */
 route.use('/notes', fetchuser, require("./services/notes"));
-
+// 
 /* AUTH MODULE EXPORT */
 module.exports = route;

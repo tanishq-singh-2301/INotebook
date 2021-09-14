@@ -3,7 +3,7 @@ const user = require("../model/User");
 /* HOME, AND MODULE EXPORT */
 exports.home = async (req, res) => {
     res.json({
-        server: "INotebook",
+        server: "INotebook v2.0",
         working: true,
         path_name: "Home",
         url: "/"

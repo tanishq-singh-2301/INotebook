@@ -5,9 +5,12 @@ const cors = require('cors');
 
 /* 
     CORS
-        -> TO ANYONE
+        -> https://inotebook.vercel.app/
+        -> https://inotebook-test.vercel.app/
 */
-app.use(cors({ origin: "*" }));
+app.use(cors({
+    origin: "*"
+}));
 
 /* URL PARSER */
 app.use(express.json());

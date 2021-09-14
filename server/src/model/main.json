@@ -1,31 +1,17 @@
 {
-    "test": {
-        "user": [
-            {
-                "_id": "613102afd33127c0e610d363",
-                "name": "Tanishq",
-                "email": "test@live.com",
-                "password": "passpass",
-                "date": "2021-09-02T16:58:23.165Z",
-                "__v": 0
-            },
-            {
-                "_id": "613107667668c570a2b2601a",
-                "name": "tanishq",
-                "email": "test1@live.com",
-                "password": "passpass",
-                "date": "2021-09-02T17:18:30.134Z",
-                "__v": 0
-            },
-            {
-                "_id": "61310800be1a9c45498290fc",
-                "name": "test2",
-                "email": "test2@live.com",
-                "password": "passpass",
-                "date": "2021-09-02T17:21:04.799Z",
-                "__v": 0
-            }
-        ],
-        "notes": []
+    "payload": {
+        "iss": "https://accounts.google.com",
+        "nbf": 1631551444,
+        "aud": "622842402395-mh2s3s3ta286faojs5bgb8muss9uv0pf.apps.googleusercontent.com",
+        "sub": "109022240471556030501",
+        "email": "tanishqsingh640@gmail.com",
+        "email_verified": true,
+        "azp": "622842402395-mh2s3s3ta286faojs5bgb8muss9uv0pf.apps.googleusercontent.com",
+        "name": "Tanishk",
+        "picture": "https://lh3.googleusercontent.com/a-/AOh14GgeiKlr2bKLI7ZBaV8n7nQJgiycB7PWGFn2Kz1dqw=s96-c",
+        "given_name": "Tanishk",
+        "iat": 1631551744,
+        "exp": 1631555344,
+        "jti": "4d01b90195104b36b38227dd11d6bb90fd4f4221"
     }
 }

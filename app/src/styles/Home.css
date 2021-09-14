@@ -1,0 +1,190 @@
+:root {
+    --header-height: 10vh;
+    --header-py: 0rem;
+    --header-px: 1.4rem;
+    --header-section-font-size: 1.2rem;
+}
+
+.main_body__div {
+    background-color: #131212;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.inotebook__header {
+    height: var(--header-height);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--header-py) var(--header-px);
+}
+
+.inotebook__header section:nth-child(1), .inotebook__header section:nth-child(3){
+    border-bottom: 1px solid rgb(108, 108, 108);
+}
+
+.in_header__section {
+    font-size: var(--header-section-font-size);
+    color: whitesmoke;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 5px 1px;
+}
+
+.time {
+    font-size: 1rem;
+}
+
+.dashboard {
+    height: calc(100vh - var(--header-height));
+    width: 100%;
+}
+
+.dashboard_name {
+    width: 100%;
+    height: 10vh;
+    padding: var(--header-py) var(--header-px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.dashboard_name h1 {
+    font-size: 1.2rem;
+    color: rgb(204, 204, 204);
+    font-weight: 600;
+}
+
+.dashboard_quote {
+    position: relative;
+    min-height: 15vh;
+    margin: var(--header-py) var(--header-px);
+    background-color: rgb(41, 41, 41);
+    border-radius: 2px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: calc(var(--header-py) + 13px) calc(var(--header-px) + 5px);
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.dashboard_quote h1:nth-child(1) {
+    color: rgb(240, 240, 240);
+    font-size: 1.4rem;
+    font-weight: 700;
+    border-bottom: 0.001rem solid dimgray;
+    padding: 0 2px;
+}
+
+.dashboard_quote span {
+    font-size: 1rem;
+    color: whitesmoke;
+}
+
+.dashboard_statistic {
+    position: relative;
+    min-height: 45vh;
+    margin: var(--header-py) var(--header-px);
+    border-radius: 2px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: calc(var(--header-py) + 13px) 0;
+    flex-direction: column;
+}
+
+.dashboard_statistic h1:nth-child(1) {
+    color: whitesmoke;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 3px;
+    border-bottom: 1px solid dimgray;
+    margin-bottom: 20px;
+}
+
+.stats {
+    min-height: 40vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.particular_stat {
+    position: relative;
+    height: 16vh;
+    min-width: 200px;
+    width: 15vw;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 2px;
+    background-color: #131212;
+    border: 1.5px solid whitesmoke;
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/paper_fibers.png");
+    background-repeat: none;
+    opacity: 90%;
+}
+
+.particular_stat::after {
+    content: "...";
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    font-size: large;
+    color: rgb(74, 72, 72);
+    cursor: pointer;
+}
+
+.particular_stat span:nth-child(1) {
+    font-size: 0.9rem;
+    color: rgb(140, 140, 140);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.particular_stat h1:nth-child(2) {
+    font-size: 1.7rem;
+    color: rgb(74, 72, 72);
+    font-weight: 700;
+}
+
+@media only screen and (min-width: 0) and (max-width: 250px) { 
+    /* :root {} */
+    .time {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 250px) and (max-width: 450px) { 
+    /* :root {} */
+    .time {
+        display: none;
+    }
+}
+/* @media only screen and (min-width: 450px) and (max-width: 550px) { 
+    :root {}
+}
+@media only screen and (min-width: 550px) and (max-width: 700px) { 
+    :root {}
+}
+@media only screen and (min-width: 700px) and (max-width: 1000px) { 
+    :root {}
+}
+@media only screen and (min-width: 1000px) { 
+    :root {}
+} */
+
+
+
+.border {
+    border: 1px solid orange;
+}
