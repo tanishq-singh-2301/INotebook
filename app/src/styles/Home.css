@@ -10,7 +10,7 @@
     min-height: 100vh;
     width: 100%;
 }
-
+/* 
 .inotebook__header {
     height: var(--header-height);
     width: 100%;
@@ -34,7 +34,7 @@
 
 .time {
     font-size: 1rem;
-}
+} */
 
 .dashboard {
     height: calc(100vh - var(--header-height));
@@ -169,22 +169,4 @@
     .time {
         display: none;
     }
-}
-/* @media only screen and (min-width: 450px) and (max-width: 550px) { 
-    :root {}
-}
-@media only screen and (min-width: 550px) and (max-width: 700px) { 
-    :root {}
-}
-@media only screen and (min-width: 700px) and (max-width: 1000px) { 
-    :root {}
-}
-@media only screen and (min-width: 1000px) { 
-    :root {}
-} */
-
-
-
-.border {
-    border: 1px solid orange;
 }

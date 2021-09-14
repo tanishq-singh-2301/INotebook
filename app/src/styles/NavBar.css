@@ -174,6 +174,7 @@
         width: 100vw!important;
     }
 }
+
 @media only screen and (min-width: 550px) and (max-width: 800px) {
     #sidemenu_navbar{
         z-index: 9999;
@@ -187,5 +188,17 @@
         right: 0!important;
         height: 100vh!important;
         width: 100vw!important;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    #sidemenu_navbar{
+        z-index: 9999;
+        overflow: hidden;
+    }
+    #main__body {
+        top: 0!important;
+        right: 0!important;
+        min-height: 100vh!important;
     }
 }

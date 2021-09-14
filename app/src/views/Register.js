@@ -16,7 +16,7 @@ const Register = () => {
     const submitForm = async (e) => {
         e.preventDefault();
         setIsLoading(true)
-        await fetch('https://inotebook-server.vercel.app/api/auth/createuser', {
+        await fetch(`${process.env.REACT_APP_API_URL}/api/auth/createuser`, {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'

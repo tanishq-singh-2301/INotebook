@@ -3,10 +3,11 @@
 
 body {
     font-family: 'Source Code Pro', monospace;
-    overflow-x: hidden;
     -ms-overflow-style: none;
     scrollbar-width: none;
     background-color: #131212;
+    max-height: 100vh;
+    overflow: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -21,35 +22,6 @@ body::-webkit-scrollbar {
     flex-direction: row;
 }
 
-/* NAVBAR */
-
-.navbar {
-    background-color: #131212;
-    height: 100vh;
-    min-width: 300px;
-    padding: 2rem 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    height: 100vh!important;
-}
-
-.navbar__top {
-    height: 20%;
-    width: 100%;
-}
-
-.navbar__middle {
-    height: 70%;
-    width: 100%;
-}
-
-.navbar__bottom {
-    height: 10%;
-    width: 100%;
-}
-
 
 /* MAIN BODY */
 
@@ -58,6 +30,14 @@ body::-webkit-scrollbar {
     min-height: 100vh;
     z-index: 999;
     border-left: .5px solid #393D42;
+    overflow-y: scroll;
+    background-color: #131212;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#main__body::-webkit-scrollbar {
+  display: none;
 }
 
 /* LOGIN FORM */

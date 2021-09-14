@@ -6,7 +6,7 @@ const NoteState = (props) => {
     const auth_token = localStorage.getItem('token');
 
     const AllNotes = async () => {
-        await fetch('https://inotebook-server.vercel.app/api/notes/allnotes', {
+        await fetch(`${process.env.REACT_APP_API_URL}/api/notes/allnotes`, {
             method: 'GET',
             headers: {
                 'Content-type': 'application/json',
@@ -20,7 +20,7 @@ const NoteState = (props) => {
 
     const AddNote = async (note_data) => {
         setNotes(notes.concat(note_data))
-        await fetch('https://inotebook-server.vercel.app/api/notes/addnote', {
+        await fetch(`${process.env.REACT_APP_API_URL}/api/notes/addnote`, {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json',
@@ -45,7 +45,7 @@ const NoteState = (props) => {
 
     const DeleteNote = async (_id) => {
         setNotes(notes.filter(res => res._id !== _id))
-        await fetch(`https://inotebook-server.vercel.app/api/notes/deletenote/${_id}`, {
+        await fetch(`${process.env.REACT_APP_API_URL}/api/notes/deletenote/${_id}`, {
             method: 'DELETE',
             headers: {
                 'Content-type': 'application/json',
@@ -57,7 +57,7 @@ const NoteState = (props) => {
 
     const EditNote = async (note_data) => {
         setNotes([...notes.filter(res => res._id !== note_data._id)].concat(note_data))
-        await fetch(`https://inotebook-server.vercel.app/api/notes/updatenote/${note_data._id}`, {
+        await fetch(`${process.env.REACT_APP_API_URL}/api/notes/updatenote/${note_data._id}`, {
             method: 'PUT',
             headers: {
                 'Content-type': 'application/json',

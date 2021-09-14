@@ -8,7 +8,7 @@ const AuthState = (props) => {
     const [quote, setQuote] = useState({ text: null, author: null });
 
     const getUser = async () => {
-        await fetch('https://inotebook-server.vercel.app/api/auth/getuser', {
+        await fetch(`${process.env.REACT_APP_API_URL}/api/auth/getuser`, {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json',

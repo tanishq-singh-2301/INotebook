@@ -1,0 +1,25 @@
+
+.inotebook__header {
+    height: var(--header-height);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--header-py) var(--header-px);
+}
+
+.inotebook__header section:nth-child(1), .inotebook__header section:nth-child(3){
+    border-bottom: 1px solid rgb(108, 108, 108);
+}
+
+.in_header__section {
+    font-size: var(--header-section-font-size);
+    color: whitesmoke;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 5px 1px;
+}
+
+.time {
+    font-size: 1rem;
+}

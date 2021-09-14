@@ -14,7 +14,7 @@ const App = () => {
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
         <section id="home__section">
-          <Navbar pages={[['Dashboard', '/', <i class="fas fa-home link__icons"></i>], ['Notes', '/allnotes', <i class="far fa-sticky-note link__icons"></i>], ['Calendar', '/calendar', <i class="far fa-calendar-alt link__icons"></i>]]} />
+          <Navbar pages={[['Dashboard', '/', <i className="fas fa-home link__icons"></i>], ['Notes', '/allnotes', <i className="far fa-sticky-note link__icons"></i>], ['Calendar', '/calendar', <i className="far fa-calendar-alt link__icons"></i>]]} />
           <Switch>
             <section id="main__body" style={state.main__body.style}>
               <Route exact path="/test" component={Test} />

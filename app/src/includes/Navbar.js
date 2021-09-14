@@ -58,7 +58,7 @@ const NavBar = (params) => {
                 <div className='sidemenu_navbar__parts bottom__part'>
                     <div className='middle_part__links' style={{ marginBottom: 0 }}>
                         <Link to='/settings' className='middle_part__link_tag' style={{ textDecoration: 'none', color: 'whitesmoke', width: '100%' }}>
-                            <h6><i class="fas fa-sliders-h link__icons"></i>&ensp;Settings</h6>
+                            <h6><i className="fas fa-sliders-h link__icons"></i>&ensp;Settings</h6>
                         </Link>
                     </div>
                 </div>

@@ -1,13 +1,11 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-import { NavbarContext, AuthContext } from 'src/imports/Context';
+import { AuthContext } from 'src/imports/Context';
+import { Header } from 'src/imports/Views';
 import 'src/styles/Home.css';
 
 const Home = () => {
-    const [time, setTime] = useState('');
-    const { state, hide, show } = useContext(NavbarContext);
     const { getUser, user, greetings, quote, getEssentials } = useContext(AuthContext);
-    const hide_show_btn = () => state.sign === '-' ? hide() : show()
     const history = useHistory();
 
     // eslint-disable-next-line
@@ -18,27 +16,13 @@ const Home = () => {
         await getUser();
         await getEssentials();
 
-        var t = new Date().toTimeString().toString().split(' ')[0].split('');
-        setTime(`${t[0]}${t[1]}${t[2]}${t[3]}${t[4]}`);
-
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
-
-    setInterval(() => {
-        var t = new Date().toTimeString().toString().split(' ')[0].split('');
-        setTime(`${t[0]}${t[1]}${t[2]}${t[3]}${t[4]}`);
-    }, 60000);
 
     return (
         <>
             <section className='main_body__div'>
-                <header className='inotebook__header'>
-                    <section className='in_header__section' onClick={hide_show_btn}>INotebook</section>
-                    <section className='in_header__section'></section>
-                    <section className='in_header__section time'>
-                        <i class="far fa-clock" style={{ fontSize: 'small' }}></i>&ensp;{time}
-                    </section>
-                </header>
+                <Header />
                 <section className='dashboard'>
                     <div className='dashboard_name'>
                         {greetings !== '' ? <h1>{greetings}, {user.name}</h1> : null}

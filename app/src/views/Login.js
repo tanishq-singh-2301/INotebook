@@ -17,7 +17,7 @@ const Login = () => {
     const submitForm = async (e) => {
         e.preventDefault();
         setIsLoading(true)
-        await fetch('https://inotebook-server.vercel.app/api/auth/login', {
+        await fetch(`${process.env.REACT_APP_API_URL}/api/auth/login`, {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'
