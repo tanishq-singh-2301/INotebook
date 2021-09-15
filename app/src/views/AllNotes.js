@@ -29,6 +29,16 @@ const AllNotesPage = () => {
             </div>
             <section className='main_body__div'>
                 <Header />
+                <div className='allnotes__addnote'>
+                    <div className='addnote_container'>
+                        <div>
+                            <h1>Wanna write something?</h1>
+                        </div>
+                        <div>
+                            <button>New Note</button>
+                        </div>
+                    </div>
+                </div>
                 <section className='dashboard'>
                     <div className='dashboard_statistic'>
                         <h1>Notes</h1>

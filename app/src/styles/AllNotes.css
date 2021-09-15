@@ -11,29 +11,58 @@
     width: 100%;
 }
 
-.inotebook__header {
-    height: var(--header-height);
+.allnotes__addnote {
+    height: 15vh;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: var(--header-py) var(--header-px);
 }
 
-.inotebook__header section:nth-child(1), .inotebook__header section:nth-child(3){
-    border-bottom: 1px solid rgb(108, 108, 108);
+.addnote_container {
+    height: 100%;
+    width: 55%;
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/paper_fibers.png");
+    opacity: 90;
+    border: 1.5px solid whitesmoke;
+    border-radius: 3px;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
 }
 
-.in_header__section {
-    font-size: var(--header-section-font-size);
-    color: whitesmoke;
+.addnote_container div:nth-child(1) {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+.addnote_container div:nth-child(1) h1:nth-child(1) {
+    color: rgb(74, 72, 72);
+    font-size: 1.3rem;
     font-weight: 600;
-    cursor: pointer;
-    padding: 5px 1px;
 }
 
-.time {
-    font-size: 1rem;
+.addnote_container div:nth-child(2) {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.addnote_container div:nth-child(2) button:nth-child(1) {
+    color: rgb(74, 72, 72);
+    font-size: 1.3rem;
+    font-weight: 600;
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/paper_fibers.png");
+    width: 150px;
+    height: 50px;
+    outline: none;
+    opacity: 90;
 }
 
 .dashboard {
@@ -78,10 +107,11 @@
     width: 30vh;
     opacity: 90;
     border: 1.5px solid whitesmoke;
-    border-radius: 5px;
+    border-radius: 3px;
     margin-bottom: 20px;
     margin-right: 20px;
     padding: 20px;
+    background-color: whitesmoke;
     background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/paper_fibers.png");
 }
 
@@ -152,6 +182,15 @@
         height: 200px;
         margin-bottom: 20px;
     }
+    .addnote_container div:nth-child(2) {
+        justify-content: center!important;
+    }
+    .addnote_container div:nth-child(2) {
+        width: 80%!important;
+    }
+    .addnote_container div:nth-child(1) {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 400px) and (max-width: 450px) { 
@@ -165,6 +204,12 @@
         height: 200px;
         min-height: 200px;
         margin-bottom: 18px;
+    }
+    .addnote_container div:nth-child(2) {
+        width: 50%!important;
+    }
+    .addnote_container div:nth-child(1) {
+        width: 50%!important;
     }
 }
 
@@ -182,5 +227,32 @@
     }
     .stats {
         justify-content: space-between;
+    }
+    .addnote_container div:nth-child(2) {
+        width: 50%!important;
+    }
+    .addnote_container div:nth-child(1) {
+        width: 50%!important;
+    }
+}
+
+@media only screen and (max-width: 870px) {
+    .addnote_container {
+        width: 100%;
+    }
+    .addnote_container div:nth-child(2) {
+        justify-content: flex-start;
+    }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 870px) {
+    .allnotes__addnote {
+        padding-right: 40px;
+    }
+    .addnote_container div:nth-child(2) {
+        width: 33%;
+    }
+    .addnote_container div:nth-child(1) {
+        width: 67%;
     }
 }
