@@ -76,13 +76,13 @@
     height: 20vh;
     min-width: 230px;
     width: 30vh;
+    opacity: 90;
     border: 1.5px solid whitesmoke;
     border-radius: 5px;
     margin-bottom: 20px;
     margin-right: 20px;
     padding: 20px;
     background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/paper_fibers.png");
-    opacity: 90%;
 }
 
 .note_heading {

@@ -118,6 +118,7 @@
     height: 16vh;
     min-width: 200px;
     width: 15vw;
+    opacity: 90;
     margin-right: 20px;
     margin-bottom: 20px;
     display: flex;
@@ -129,7 +130,6 @@
     border: 1.5px solid whitesmoke;
     background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/paper_fibers.png");
     background-repeat: none;
-    opacity: 90%;
 }
 
 .particular_stat::after {
