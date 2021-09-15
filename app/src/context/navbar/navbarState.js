@@ -24,7 +24,6 @@ const NavbarState = (props) => {
             navbar: {
                 style: {
                     left: '-600px',
-                    border: 'none'
                 }
             },
             main__body: {

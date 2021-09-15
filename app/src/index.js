@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import ReactDOM from 'react-dom';
-import { Home, About, Navbar, AddNote, Test, AllNotes, Login, Settings, Register } from 'src/imports/Views';
+import { Home, About, Navbar, AddNote, Test, AllNotes, Login, Settings, Register, Calendar } from 'src/imports/Views';
 import { NavbarState, NotesState, AuthState } from 'src/imports/State';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { NavbarContext } from 'src/imports/Context';
@@ -19,6 +19,7 @@ const App = () => {
             <section id="main__body" style={state.main__body.style}>
               <Route exact path="/test" component={Test} />
               <Route exact path="/" component={Home} />
+              <Route path='/calendar' component={Calendar} />
               <Route path="/about" component={About} />
               <Route path="/addnote" component={AddNote} />
               <Route path="/editnote/:id" component={AddNote} />

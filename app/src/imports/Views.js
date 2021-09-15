@@ -8,6 +8,7 @@ import Login from 'src/views/Login';
 import Settings from 'src/views/Settings'
 import Register from 'src/views/Register';
 import Header from 'src/includes/Header';
+import Calendar from 'src/views/Calendar';
 
 export {
     Home,
@@ -19,5 +20,6 @@ export {
     Login,
     Settings,
     Register,
-    Header
+    Header,
+    Calendar
 }

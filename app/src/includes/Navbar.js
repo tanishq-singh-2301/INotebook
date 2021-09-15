@@ -19,6 +19,11 @@ const NavBar = (params) => {
         // eslint-disable-next-line
     }, []);
 
+    const jump = () => {
+        if (window.innerWidth < 800) {
+            hide()
+        }
+    }
 
     return (
         <>
@@ -46,7 +51,7 @@ const NavBar = (params) => {
                         params.pages.map((res, index) => {
                             return (
                                 <div key={index} className='middle_part__links'>
-                                    <Link to={res[1]} className='middle_part__link_tag' style={{ textDecoration: 'none', color: 'whitesmoke', width: '100%' }}>
+                                    <Link onClick={jump} to={res[1]} className='middle_part__link_tag' style={{ textDecoration: 'none', color: 'whitesmoke', width: '100%' }}>
                                         <h6>{res[2]}&ensp;{res[0]}</h6>
                                     </Link>
                                 </div>
@@ -57,7 +62,7 @@ const NavBar = (params) => {
 
                 <div className='sidemenu_navbar__parts bottom__part'>
                     <div className='middle_part__links' style={{ marginBottom: 0 }}>
-                        <Link to='/settings' className='middle_part__link_tag' style={{ textDecoration: 'none', color: 'whitesmoke', width: '100%' }}>
+                        <Link onClick={jump} to='/settings' className='middle_part__link_tag' style={{ textDecoration: 'none', color: 'whitesmoke', width: '100%' }}>
                             <h6><i className="fas fa-sliders-h link__icons"></i>&ensp;Settings</h6>
                         </Link>
                     </div>

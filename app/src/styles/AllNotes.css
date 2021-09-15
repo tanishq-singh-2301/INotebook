@@ -29,6 +29,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    box-shadow: 0px 0px 5px dimgray;
 }
 
 .addnote_container div:nth-child(1) {
@@ -54,7 +55,7 @@
     justify-content: center;
 }
 
-.addnote_container div:nth-child(2) button:nth-child(1) {
+.addnote_container div:nth-child(2) a:nth-child(1) {
     color: rgb(74, 72, 72);
     font-size: 1.3rem;
     font-weight: 600;
@@ -62,7 +63,15 @@
     width: 150px;
     height: 50px;
     outline: none;
-    opacity: 90;
+    opacity: 80;
+    border: 2px solid rgb(74, 72, 72);
+    border-radius: 3px;
+    box-shadow: 0px 0px 2px dimgray;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .dashboard {

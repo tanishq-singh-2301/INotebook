@@ -1,18 +1,18 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect } from 'react';
 import { NotesContext } from 'src/imports/Context';
 import { useHistory, Link } from 'react-router-dom';
 import { Header } from 'src/imports/Views';
 import 'src/styles/AllNotes.css';
 
 const AllNotesPage = () => {
-    const [docHeight, setDocHeight] = useState(0);
+    // const [docHeight, setDocHeight] = useState(0);
     const { AllNotes, notes, DeleteNote } = useContext(NotesContext);
     const history = useHistory();
     const deleteNoteBtn = (_id) => DeleteNote(_id)
 
-    window.addEventListener('scroll', () => {
-        setDocHeight((window.scrollY / (document.querySelector('body').scrollHeight - window.innerHeight) * 100))
-    })
+    // window.addEventListener('scroll', () => {
+    //     setDocHeight((window.scrollY / (document.querySelector('body').scrollHeight - window.innerHeight) * 100))
+    // })
 
     // eslint-disable-next-line
     useEffect(async () => {
@@ -24,9 +24,9 @@ const AllNotesPage = () => {
 
     return (
         <>
-            <div style={{ position: 'fixed', top: '0', right: '0', width: '8px', height: '100%', borderLeft: '1px solid dimgray' }}>
+            {/* <div style={{ position: 'fixed', top: '0', right: '0', width: '8px', height: '100%', borderLeft: '1px solid dimgray' }}>
                 <div style={{ height: `${docHeight}%`, width: '100%', backgroundColor: 'dimgray' }}></div>
-            </div>
+            </div> */}
             <section className='main_body__div'>
                 <Header />
                 <div className='allnotes__addnote'>
@@ -35,7 +35,7 @@ const AllNotesPage = () => {
                             <h1>Wanna write something?</h1>
                         </div>
                         <div>
-                            <button>New Note</button>
+                            <Link to='/addnote'>New Note</Link>
                         </div>
                     </div>
                 </div>

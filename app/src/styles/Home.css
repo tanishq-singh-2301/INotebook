@@ -43,19 +43,21 @@
     padding: calc(var(--header-py) + 13px) calc(var(--header-px) + 5px);
     flex-direction: column;
     margin-bottom: 40px;
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/paper_fibers.png");
+    opacity: 90;
 }
 
 .dashboard_quote h1:nth-child(1) {
-    color: rgb(240, 240, 240);
+    color: rgb(74, 72, 72);
     font-size: 1.4rem;
     font-weight: 700;
-    border-bottom: 0.001rem solid dimgray;
+    border-bottom: 0.001rem solid rgb(74, 72, 72);
     padding: 0 2px;
 }
 
 .dashboard_quote span {
     font-size: 1rem;
-    color: whitesmoke;
+    color: rgb(105, 99, 99);
 }
 
 .dashboard_statistic {
