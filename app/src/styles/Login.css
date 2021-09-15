@@ -1,0 +1,79 @@
+.login__form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 350px;
+    height: 50%;
+}
+
+/* LOGIN FORM */
+.login__form__input {
+    display: block;
+    height: 45px;
+    width: 65%;
+    border: 1px solid rgba(255, 255, 255, 30%);
+    border-radius: 5px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 20%);
+    margin-bottom: 15px;
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    appearance: none;
+    color: #2c3e50;
+    transition: .5s;
+    font-size: large;
+    font-weight: 500;
+}
+
+.login__form__input::placeholder {
+    color: #fff;
+}
+
+.login__form__input:hover {
+    background-color: rgba(255, 255, 255, 30%);
+}
+
+.login__form__input:focus {
+    width: 80%;
+    background-color: #fff;
+}
+
+.login__form__submit__btn:hover {
+    background-color: rgba(255, 255, 255, 80%)!important;
+}
+
+.login__form__submit__btn {
+    display: block;
+    height: 45px;
+    border: 1px solid rgba(255, 255, 255, 30%);
+    border-radius: 5px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 60%);
+    color: #2c3e50;
+    font-size: large;
+    font-size: 500;
+    font-size: 'Source Sans Pro', sans-serif;
+    transition: .5s;
+    margin-bottom: 15px;
+    width: 65%;
+}
+
+@media only screen and (max-width: 350px) {
+    .login__form {
+        width: 90%;
+        height: 55%;
+    }
+    .login__form__input:focus {
+        width: 90%;
+    }
+    .login__form__input {
+        width: 75%;
+    }
+    .login__form__submit__btn {
+        width: 80%;
+    }
+    .login__form__submit__btn {
+        width: 75%;
+    }
+}

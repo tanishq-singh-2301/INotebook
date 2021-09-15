@@ -6,12 +6,17 @@ body {
     -ms-overflow-style: none;
     scrollbar-width: none;
     background-color: #131212;
+    scroll-behavior: smooth;
     max-height: 100vh;
     overflow: hidden;
 }
 
 body::-webkit-scrollbar {
   display: none;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 #home__section {
@@ -38,40 +43,4 @@ body::-webkit-scrollbar {
 
 #main__body::-webkit-scrollbar {
   display: none;
-}
-
-/* LOGIN FORM */
-.login__form__input {
-    display: block;
-    height: 45px;
-    width: 60%;
-    border: 1px solid rgba(255, 255, 255, 30%);
-    border-radius: 5px;
-    outline: none;
-    background-color: rgba(255, 255, 255, 20%);
-    margin-bottom: 15px;
-    text-align: center;
-    font-family: 'Source Sans Pro', sans-serif;
-    appearance: none;
-    color: #2c3e50;
-    transition: .5s;
-    font-size: large;
-    font-weight: 500;
-}
-
-.login__form__input::placeholder {
-    color: #fff;
-}
-
-.login__form__input:hover {
-    background-color: rgba(255, 255, 255, 30%);
-}
-
-.login__form__input:focus {
-    width: 75%;
-    background-color: #fff;
-}
-
-.login__form__submit__btn:hover {
-    background-color: rgba(255, 255, 255, 80%)!important;
 }

@@ -40,12 +40,17 @@ const AllNotesPage = () => {
                     </div>
                 </div>
                 <section className='dashboard'>
+                    {
+                        notes[0] === 'loading' ?
+                            <div className="spinner-border spinner-border-sm" style={{ backgroundColor: 'transparent', color: 'whitesmoke', fontSize: 'medium', fontWeight: '500', position: 'absolute', bottom: '55%', right: '50%' }} role="status"></div>
+                            : null
+                    }
                     <div className='dashboard_statistic'>
                         <h1>Notes</h1>
                         <div className='stats'>
                             {
                                 notes[0] === 'loading' ?
-                                    <p>Loading...</p> :
+                                    null :
                                     notes.map((res) => {
                                         return (
                                             <div key={res._id} className='particular_note'>

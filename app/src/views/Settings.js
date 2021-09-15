@@ -22,7 +22,9 @@ const Settings = () => {
         <>
             <section className='main_body__div'>
                 <Header />
-                <span style={{ color: 'whitesmoke', cursor: 'pointer' }} onClick={logout}>Logout</span>
+                <div className='logoutbtn'>
+                    <span onClick={logout}>Logout</span>
+                </div>
             </section>
         </>
     )
