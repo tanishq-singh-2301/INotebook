@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: space-between;
     padding: var(--header-py) var(--header-px);
+    margin-top: 0.5vh;
 }
 
 .inotebook__header section:nth-child(1), .inotebook__header section:nth-child(3){
