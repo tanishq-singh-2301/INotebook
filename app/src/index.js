@@ -8,9 +8,6 @@ import 'src/styles/index.css';
 
 const App = () => {
   const { state } = useContext(NavbarContext);
-  try {
-    window.screen.orientation.lock('portrait-primary')
-  } catch (err) { console.log({ err }) }
   return (
     <BrowserRouter>
       <Switch>
